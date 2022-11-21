@@ -5,7 +5,7 @@
 
 resource "local_file" "default" {
 
-    count           = var.cluster_config_values ? 1: 0
+    count           = var.cluster_config_enabled ? 1: 0
 
     content         = local.cluster_config_values
     filename        = var.filename
