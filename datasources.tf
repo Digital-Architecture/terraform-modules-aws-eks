@@ -4,7 +4,7 @@
 
 data "terraform_remote_state" "networking" {
   backend = "s3"
-  workspace = "${terraform.workspace}"
+  workspace = terraform.workspace
   
   config = {
     bucket    = "terraform-labs-digital-architecture"
